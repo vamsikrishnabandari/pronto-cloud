@@ -1,0 +1,4 @@
+PS C:\Users\vamsiroyal\Desktop\pronto\pronto-cloud> & C:/Users/vamsiroyal/AppData/Local/Programs/Python/Python39/python.exe c:/Users/vamsiroyal/Desktop/pronto/pronto-cloud/main.py
+Enter Directions: B10,L1,F10,R1
+steps taken to return:4
+units taken to return:20

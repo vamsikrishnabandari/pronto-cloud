@@ -110,6 +110,45 @@ def main():
 
     steps = 0
     units = 0
+
+    if x == 0 and y == 0:
+        steps = 0
+    elif x == 0 and y != 0:
+        steps = 1
+        units = abs(y)
+    elif x != 0 and y == 0:
+        steps = 1
+        units = abs(x)
+    else:
+        steps = 2
+        units = abs(x) + abs(y)
+
+    
+    lx = xpos
+    ly = ypos
+    xpos = lx
+    ypos = ly
+    rx = xpos
+    ry = ypos
+    minleft = 0
+    minleft = rotateleft(lx,ly,minleft)
+    minright = 0
+    minright = rotateright(rx,ry,minright)
+
+
+    if minleft < minright:
+        steps = steps + minleft
+    elif minleft == 0 and minright == 0:
+        steps = steps + 2
+    else:
+        steps = steps + minright
+    
+    print("steps taken to return:"+str(steps))
+    print("units taken to return:"+str(units))
+
+
+if __name__ == '__main__':
+    main()
             
             
         

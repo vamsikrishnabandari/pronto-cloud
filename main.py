@@ -56,3 +56,60 @@ def rotateright(rx,ry,count):
         ry = resp[1]
         count = count + 1
         return rotateright(rx,ry,count)
+
+def main():
+    inp = input("Enter Directions: ")
+    xpos = 'Stop'
+    ypos = 'True'
+    x = 0
+    y = 0
+    splice = inp.split(",")
+    res = []
+    for i in range(len(splice)):
+        ind = splice[i]
+        val = ind[0]
+        dist = ind[1:]
+        if val == 'L':
+            for j in range (int(dist)):
+                res = checkleft(xpos,ypos)
+                resp = res.split(' ')
+                xpos = resp[0]
+                ypos = resp[1]
+        elif val == 'R':
+            for j in range(int(dist)):
+                res = checkright(xpos,ypos)
+                resp = res.split(' ')
+                xpos = resp[0]
+                ypos = resp[1]
+        elif val == 'F':
+            if xpos == 'True':
+                for j in range(int(dist)):
+                    x = x+1
+            if ypos == 'True':
+                for j in range(int(dist)):
+                    y = y+1
+            if xpos == 'False':
+                for j in range(int(dist)):
+                    x = x-1
+            if ypos == 'False':
+                for j in range(int(dist)):
+                    y = y-1
+        elif val == 'B':
+            if xpos == 'True':
+                for j in range(int(dist)):
+                    x = x-1
+            if ypos == 'True':
+                for j in range(int(dist)):
+                    y = y-1
+            if xpos == 'False':
+                for j in range(int(dist)):
+                    x = x+1
+            if ypos == 'False':
+                for j in range(int(dist)):
+                    y = y+1
+
+    steps = 0
+    units = 0
+            
+            
+        

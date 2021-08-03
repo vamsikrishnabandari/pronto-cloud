@@ -11,3 +11,6 @@ def checkleft(xpos,ypos):
     if xpos == 'stop' and ypos == 'True':
         xpos = 'False Stop'
         return xpos
+    elif xpos == 'False' and ypos == 'stop'
+        ypos = 'True stop'
+        return xpos
